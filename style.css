@@ -1,0 +1,96 @@
+* {
+    font-family: Helvetica, serif;
+}
+
+td {
+    padding: 12px;
+}
+
+table {
+    margin: 0px 0px 12px 0px;
+}
+
+table thead {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+/* '>' --> select element that are parent of */
+/* for aligning Total column within table head */
+table thead > tr > td:last-child {
+    text-align: right;
+}
+
+/*
+=====  FORMATTING COLUMN 3 OF TABLE
+*/
+
+/* for aligning 3 column of table */
+table td:nth-child(3) {
+    text-align: center;
+}
+
+table td:nth-child(3):before {
+    content: "x ";
+}
+
+table > thead tr > td:nth-child(3):before {
+    content: " ";
+}
+
+table > thead tr > td:nth-child(3):after {
+    content: " ";
+}
+
+table td:nth-child(3):after {
+    content: " =";
+}
+
+/*
+====  FORMATTING COLUMN 2 OF TABLE
+*/
+
+table tr:nth-of-type(2n) {
+    background-color: lightblue;
+}
+
+tbody > tr td:nth-of-type(2n):before {
+    content: " $ ";
+}
+
+tbody > tr:last-of-type > td:nth-child(2):before {
+    content: " ";
+}
+
+/*
+===== FORMATTING COLUMN 4 OF TABLE
+*/
+
+tbody > tr > td:nth-child(4) {
+    text-align: right;
+}
+
+/*
+===== FORMATTING BUTTONS OF TABLE
+*/
+
+input {
+    color: white;
+    border: none;
+    padding: 6px;
+}
+
+input[value="submit"] {
+    background-color: red;
+}
+
+input[value="clear"] {
+    background-color: green;
+}
+
+
+
+
+
+
+
