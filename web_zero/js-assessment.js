@@ -49,10 +49,11 @@ function createUserObjectsFrom(currentUserRow, userKeys) {
 
 //===|| 005
 function formatUserObjectFrom(userObj) {
-    let userFormattedArr = [];
+    let userFormattedArr = {};
     let userObjWithAddedKeys = addKeysTo(userObj); // add additional meta data "keys" to object
 
     let isShuffleIdentity = true; // switch to activate shuffling of user identity
+
     let isShuffleCount = 0;
     let firstNameArr = [];
     let lastNameArr = [];
@@ -70,16 +71,19 @@ function formatUserObjectFrom(userObj) {
                 isShuffleCount++;
             }
             userRow = userObjWithAddedKeys[idx];
-            userFormattedArr.push( assignValuesTo( userRow, firstNameArr, lastNameArr, isShuffleIdentity) );
+            userFormattedArr[idx] = assignValuesTo( userRow, firstNameArr, lastNameArr, isShuffleIdentity) ;
         } else {
             userRow = userObjWithAddedKeys[idx]; // Stores current row into a variable; use sequential indexing
-            userFormattedArr.push( assignValuesTo(userRow, "", "", false) );
+            userFormattedArr[idx] = assignValuesTo(userRow, "", "", false) ;
         }
 
     }
     console.log(userFormattedArr);
     return userFormattedArr;
 }
+
+
+// { 1:{id:1, name:""}, 2: {} }
 
 //===|| 006
 function addKeysTo(userObj) {
