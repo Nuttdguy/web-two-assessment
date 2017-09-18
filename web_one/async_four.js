@@ -21,5 +21,6 @@ fs.readFile(file, 'utf8', function(err, data) {
     }
     let lines = data.split('\n').length - 1;
     console.log(lines);
-})
+});
+
 
