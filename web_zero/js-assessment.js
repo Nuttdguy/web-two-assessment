@@ -53,7 +53,7 @@ function formatUserObjectFrom(userObj) {
     let userObjWithAddedKeys = addKeysTo(userObj); // add additional meta data "keys" to object
 
     let isShuffleIdentity = true; // switch to activate shuffling of user identity
-
+s
     let isShuffleCount = 0;
     let firstNameArr = [];
     let lastNameArr = [];
